@@ -1,4 +1,4 @@
 <?php
-	echo "New Main page 2";
+	echo "New Main page 3";
 ?>
 
