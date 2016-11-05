@@ -8,6 +8,11 @@
       nameApp.controller('NameCtrl', function ($scope){
         $scope.firstName = 'John';
 		$scope.names = ['Larry', 'Curly', 'Moe'];
+		$scope.countries = [
+          {"name": "China", "population": 1359821000},
+          {"name": "India", "population": 1205625000},
+          {"name": "U.S.A.","population": 312247000}
+        ];
 		$scope.addName = function() {
 		    $scope.names.push($scope.enteredName);
 			$scope.enteredName = "";
@@ -48,5 +53,8 @@
 	    <input type="text" ng-model="enteredName">
 		<input type="submit" value="Add">
 	</form>
+	<ul>
+	     <li ng-repeat="country in countries">{{country.name}} - population {{country.population}}</li>
+	</ul>
   </body>  
 </html>
